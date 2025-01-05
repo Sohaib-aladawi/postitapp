@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
 
 export const logout = createAsyncThunk(
@@ -14,7 +14,7 @@ export const logout = createAsyncThunk(
   })
 export const registerUser = createAsyncThunk(
   "users/registerUser",
-  async (userData) => { 
+  async (userData) => {
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/registerUser`, {
         name: userData.name,
